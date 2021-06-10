@@ -1,0 +1,72 @@
+2021-06-05 08:12:55,160 - ERROR - 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+----------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\network.py", line 529, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\ui.py", line 459, in _onDBConnect
+    dbWrapper.connect(self.mainTabGroup.mainTab.connectionInput.text())
+  File "D:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\db.py", line 45, in connect
+    self.mysql = mysql.connector.connect(user=info['acc'], password=info['pass'])
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\__init__.py", line 177, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\connection.py", line 104, in __init__
+    self.connect(**kwargs)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\abstracts.py", line 781, in connect
+    self._open_connection()
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\connection.py", line 284, in _open_connection
+    self._socket.open_connection()
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\mysql\connector\network.py", line 532, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+2021-06-05 08:16:35,093 - ERROR - Failed to establish connection to IPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+----------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 932, in _connect
+    s.connect(resolved_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\ui.py", line 459, in _onDBConnect
+    dbWrapper.connect(self.mainTabGroup.mainTab.connectionInput.text())
+  File "D:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\db.py", line 49, in connect
+    self.neo4j = GraphDatabase.driver(info['uri'], auth=(info['acc'], info['pass']))
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\__init__.py", line 183, in driver
+    return cls.bolt_driver(parsed.netloc, auth=auth, **config)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\__init__.py", line 196, in bolt_driver
+    return BoltDriver.open(target, auth=auth, **config)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\__init__.py", line 359, in open
+    pool = BoltPool.open(address, auth=auth, pool_config=pool_config, workspace_config=default_workspace_config)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 535, in open
+    seeds = [pool.acquire() for _ in range(pool_config.init_size)]
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 535, in <listcomp>
+    seeds = [pool.acquire() for _ in range(pool_config.init_size)]
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 549, in acquire
+    return self._acquire(self.address, timeout)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 413, in _acquire
+    connection = self.opener(address, timeout)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 532, in opener
+    return Bolt.open(addr, auth=auth, timeout=timeout, routing_context=routing_context, **pool_config)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 198, in open
+    keep_alive=pool_config.keep_alive,
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 1052, in connect
+    raise last_error
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 1042, in connect
+    s = _connect(resolved_address, timeout, keep_alive)
+  File "d:\Professional\Master\MTH003 - Cac He Co So Du Lieu Nang Cao\Final Project\Source\Implementation1\venv\lib\site-packages\neo4j\io\__init__.py", line 946, in _connect
+    raise ServiceUnavailable("Failed to establish connection to {!r} (reason {})".format(resolved_address, error))
+neo4j.exceptions.ServiceUnavailable: Failed to establish connection to IPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2021-06-05 08:16:49,599 - INFO - CONNECTIONS FINISHED: All DBMS connections have been successfully established!
+----------------------------------------------------------------------------------------------------
+2021-06-05 08:16:54,327 - INFO - ALL DATABASES FOUND!
+----------------------------------------------------------------------------------------------------
+2021-06-05 08:16:54,331 - INFO - Picking up databases...
+----------------------------------------------------------------------------------------------------
+2021-06-05 08:16:54,346 - INFO - ALL DATABASES PICKED UP!
+----------------------------------------------------------------------------------------------------

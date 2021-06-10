@@ -1,0 +1,43 @@
+{
+    "mems":
+    {
+        "user1":
+        {
+            "id": "TCHMID0000001YS",
+            "username": "Doraemon",
+            "password": "45e92be0821bb2ba035c183e1d335f8a294b7d84db13346347a4900a09ffb138",
+            "level": "Standard",
+
+            "fullname": "Nobi Doraemon",
+            "birth": "2112-09-03",
+            "phone": "0979097909",
+            "email": "doraemon.nobi@fujiko.fujio",
+            "address": "3-10-5 Tsunigadai Tsukishigahara Nerima-​ku, Tokyo, Nhật Bản"
+        },
+        "user2":
+        {
+            "id": "TCHMID0000002YV",
+            "username": "Nobita",
+            "password": "45e92be0821bb2ba035c183e1d335f8a294b7d84db13346347a4900a09ffb138",
+            "level": "VIP",
+
+            "fullname": "Nobi Nobita",
+            "birth": "1961-08-07",
+            "phone": "0121020189",
+            "email": "nobita.nobi@fujiko.fujio",
+            "address": "3-10-5 Tsunigadai Tsukishigahara Nerima-​ku, Tokyo, Nhật Bản"
+        }
+    },
+
+    "mem_levels":
+    {
+        "Standard":
+        {
+            "mems": ["TCHMID0000001YS"]
+        },
+        "VIP":
+        {
+            "mems": ["TCHMID0000002YV"]
+        }
+    }
+}
